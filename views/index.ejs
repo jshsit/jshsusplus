@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>전남과학고등학교 통합 로그인 (IAM)</title>
+    
+  </head>
+  <body>
+  
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('images/bg_1.jpg');" id="bg_img"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <h3>전남과학고 <strong>통합 로그인</strong></h3>
+            <p class="mb-4">하나의 계정으로 과구리, 상벌점 관리, 실험실 예약 시스템을 동시에 이용할 수 있습니다.</p>
+            <form action="/login" method="get">
+              <div class="form-group first">
+                <label for="username">학번 또는 교사번호</label>
+                <input type="number" class="form-control" placeholder="번호를 입력하세요" id="id" name="id" required>
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">비밀번호</label>
+                <input type="password" class="form-control" placeholder="비밀번호를 입력하세요" id="password" name="password" required>
+              </div>
+              <p style="color: red; font-weight: bold;"><%=return_msg%></p>
+              <input type="text" class="form-control" value="<%=service%>" id="service" name="service" style="display: none;" required>
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">로그인 기억하기</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label>
+                <span class="ml-auto"><a href="/reg" class="forgot-pass">회원가입</a></span> 
+              </div>
+
+              <input type="submit" value="로그인" class="btn btn-block btn-primary">
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+    
+    
+  <script>
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // 안드로이드 아이폰을 검사해 체크
+    
+    window.onload=function(){
+      if(isMobile) {
+
+        document.getElementById('bg_img').style.display = 'none'
+    }
+    }
+
+  </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
